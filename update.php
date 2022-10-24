@@ -7,7 +7,8 @@
   $id = $_GET['id'];
  $name = $_POST['name'];
  $location = $_POST['location'];
- $q = " update data set id=$id, name='$name', location='$location' where id=$id  ";
+ $age = $_POST['age'];
+ $q = " update data set id=$id, name='$name', location='$location', age='$age' where id=$id  ";
 
   $query = mysqli_query($con,$q);
 
@@ -39,11 +40,13 @@
  <h1 class="text-white text-center">  Update Operation </h1>
  </div><br>
 
-  <label> Username: </label>
+  <label> name: </label>
  <input type="text" name="name" class="form-control"> <br>
 
-  <label> Password: </label>
+  <label> location: </label>
  <input type="text" name="location" class="form-control"> <br>
+ <label> age: </label>
+ <input type="number" name="age" class="form-control"> <br>
 
   <button class="btn btn-success" type="submit" name="done"> Submit </button><br>
 

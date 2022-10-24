@@ -5,8 +5,9 @@ include 'conn.php';
 if(isset($_POST['done'])){
     $name = $_POST['name'];
     $location = $_POST['location'];
+    $age = $_POST['age'];
 
-   $q = " INSERT INTO `data`(`name`,`location`) VALUES('$name','$location')";
+   $q = " INSERT INTO `data`(`name`,`location`,`age`) VALUES('$name','$location',$age)";
 
    $query = mysqli_query($con,$q);
 }
@@ -38,6 +39,8 @@ if(isset($_POST['done'])){
         <input type="text" name="name" class="form-control">
         <label>location</label>
         <input type="text" name="location" class="form-control">
+        <label>age</label>
+        <input type="number" name="age" class="form-control">
         <button type="submit" class="btn btn-success" name="done">Submit</button>
 </div>
     </form>

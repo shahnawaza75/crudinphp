@@ -27,6 +27,7 @@
  <th> Id </th>
  <th> Username </th>
  <th> Location </th>
+ <th> age </th>
  <th> Delete </th>
  <th> Update </th>
 
@@ -45,6 +46,7 @@
  <td> <?php echo $res['id'];  ?> </td>
  <td> <?php echo $res['name'];  ?> </td>
  <td> <?php echo $res['location'];  ?> </td>
+ <td> <?php echo $res['age'];  ?> </td>
  <td> <button class="btn-danger btn"> <a href="delete.php?id=<?php echo $res['id']; ?>" class="text-white"> Delete </a>  </button> </td>
  <td> <button class="btn-primary btn"> <a href="update.php?id=<?php echo $res['id']; ?>" class="text-white"> Update </a> </button> </td>
 
